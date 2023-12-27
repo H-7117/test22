@@ -326,36 +326,14 @@
       </li>
 
 
-
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="">
+        <a class="nav-link collapsed"  href="{{ route('tenant.index') }}">
             <i class="bi bi-grid"></i>
-            <span>الشركات</span><i class="bi bi-chevron-down me-auto"></i>
+            <span>المنظمات</span>
         </a>
-        <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-         {{-- |||||||||||||||||||||||||||||| --}}
-         <li class="nav-item" id="sidebar-navone">
-            <a class="nav-link collapsed"  href="{{ route('platform.companies.index') }}">
-                <span>الادوار</span>
-            </a>
-          
-          </li>
-        
-         
-         
-        
-        
-        {{-- |||||||||||||||||||||||||||||||||||||||| --}}
-
-        <li class="nav-item" id="sidebar-navtwo">
-            <a class="nav-link collapsed" href="{{ route('platform.companiesUser.index') }}">
-                <span>المستخدمون</span>
-            </a>
-        
-          </li><!-- End Components Nav -->
-        
-        </ul>
       </li><!-- End Components Nav -->
+
+ 
 
       <li class="nav-item">
         <i class="bi bi-person-gear"></i>
@@ -364,10 +342,33 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed"  href="{{ route('tenant.index') }}">
+      <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="">
           <i class="bi bi-grid"></i>
-          <span>الحسابات</span>
+          <span>الحسابات</span><i class="bi bi-chevron-down me-auto"></i>
       </a>
+      <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+       {{-- |||||||||||||||||||||||||||||| --}}
+       <li class="nav-item" id="sidebar-navone">
+          <a class="nav-link collapsed"  href="{{ route('platform.companies.index') }}">
+              <span>الادوار</span>
+          </a>
+        
+        </li>
+      
+       
+       
+      
+      
+      {{-- |||||||||||||||||||||||||||||||||||||||| --}}
+
+      <li class="nav-item" id="sidebar-navtwo">
+          <a class="nav-link collapsed" href="{{ route('platform.companiesUser.index') }}">
+              <span>المستخدمون</span>
+          </a>
+      
+        </li><!-- End Components Nav -->
+      
+      </ul>
     </li><!-- End Components Nav -->
 
     <li class="nav-item">

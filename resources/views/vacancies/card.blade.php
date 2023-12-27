@@ -31,8 +31,27 @@
             <div class="card-body">
               <div class="d-flex justify-content-between mt-2">
 
-                <h5 class="card-title fs-3 ">الوظائف</h5>
+                <div style="line-height: 0px">
+                    <h5 class="card-title fs-3 ">الوظائف</h5>
+                    <p>إدارة جميع فرص العمل الخاصة بك في مكان واحد</p>
+                </div>
+                
                 <button class="create float-right"><a style="color: white" href="{{ route('tenant.add') }}">أضافه</a></button>
+              </div>
+              <div class="d-flex  ">
+
+
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" id="searchJob" class="form-control" placeholder="البحث عن وظائف بواسطة العنوان أو الرقم التعريفي">
+                </div>
+                <div class="btn-group border" >
+                    <button type="button " style=" padding: 0px 15px ; border-radius: 8px; border: 1px black; display: flex; justify-content: center; align-items: center " class="btn " data-bs-toggle="dropdown" aria-expanded="false">
+                       
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #757779"><span style="margin-right: 10px">فلتر</span></i>
+                    </button>
+                </div>
+
               </div>
               
               <p></p>

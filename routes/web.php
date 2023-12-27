@@ -80,90 +80,92 @@ Route::get('/platform/companies/companies/delete', function () {
     return view('platform.companies.delete');
 })->name('platform.companies.delete');
 // ========================================================================
-Route::get('/platform/companiesUser/index', function () {
+Route::get('/companiesUser/index', function () {
     return view('platform.companiesUser.index');
 })->name('platform.companiesUser.index');
-Route::get('/platform/companiesUser/add', function () {
+Route::get('/companiesUser/add', function () {
     return view('platform.companiesUser.add');
 })->name('platform.companiesUser.add');
-Route::get('/platform/companiesUser/view', function () {
+Route::get('/companiesUser/view', function () {
     return view('platform.companiesUser.view');
 })->name('platform.companiesUser.view');
-Route::get('/platform/companiesUser/update', function () {
+Route::get('/companiesUser/update', function () {
     return view('platform.companiesUser.edit');
 })->name('platform.companiesUser.edit');
-Route::get('/platform/companiesUser/delete', function () {
+Route::get('/companiesUser/delete', function () {
     return view('platform.companiesUser.delete');
 })->name('platform.companiesUser.delete');
 // ======================================================= الشركات
-Route::get('tenant', function () {
+Route::get('platform/tenant', function () {
     return view('tenant.index');
 })->name('tenant.index');
 
-Route::get('tenant/add', function () {
+Route::get('platform/tenant/add', function () {
     return view('tenant.add');
 })->name('tenant.add');
 
-Route::get('tenant/edit', function () {
+Route::get('platform/tenant/edit', function () {
     return view('tenant.edit');
 })->name('tenant.edit');
 
-Route::get('tenant/view', function () {
+Route::get('platform/tenant/view', function () {
     return view('tenant.view');
 })->name('tenant.view');
 
-Route::get('tenant/delete', function () {
+Route::get('platform/tenant/delete', function () {
     return view('tenant.delete');
 })->name('tenant.delete');
 
 // ======================================================= الوظائف
-Route::get('job', function () {
+Route::get('companies/job', function () {
     return view('job.index');
 })->name('job.index');
 
-Route::get('job/add', function () {
+Route::get('companies/job/add', function () {
     return view('job.add');
 })->name('job.add');
 
-Route::get('job/edit', function () {
+Route::get('companies/job/edit', function () {
     return view('job.edit');
 })->name('job.edit');
 
-Route::get('job/view', function () {
+Route::get('companies/job/view', function () {
     return view('job.view');
 })->name('job.view');
 
-Route::get('job/delete', function () {
+Route::get('companies/job/delete', function () {
     return view('job.delete');
 })->name('job.delete');
 
 // ======================================================= الباحث
-Route::get('seeker', function () {
+Route::get('companies/seeker', function () {
     return view('seeker.index');
 })->name('seeker.index');
 
-Route::get('seeker/add', function () {
+Route::get('companies/seeker/add', function () {
     return view('seeker.add');
 })->name('seeker.add');
 
-Route::get('seeker/edit', function () {
+Route::get('companies/seeker/edit', function () {
     return view('seeker.edit');
 })->name('seeker.edit');
 
-Route::get('seeker/view', function () {
+Route::get('companies/seeker/view', function () {
     return view('seeker.view');
 })->name('seeker.view');
 
-Route::get('seeker/delete', function () {
+Route::get('companies/seeker/delete', function () {
     return view('seeker.delete');
 })->name('seeker.delete');
 // ====================================== vacancies
-Route::get('vacancies',function(){
+Route::get('companies/vacancies',function(){
     return view('vacancies.index');
 })->name('vacancies.index');
-Route::get('vacancies/card',function(){
+
+Route::get('companies/vacancies/card',function(){
     return view('vacancies.card');
 })->name('vacancies.card');
-Route::get('vacancies/view',function(){
+
+Route::get('companies/vacancies/view',function(){
     return view('vacancies.view');
 })->name('vacancies.view');

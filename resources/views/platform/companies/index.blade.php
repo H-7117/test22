@@ -38,7 +38,7 @@
             <div class="card-body">
               <div class="d-flex justify-content-between mt-2">
 
-                <h5 class="card-title fs-3">المستخدمين</h5>
+                <h5 class="card-title fs-3">الادوار</h5>
                 <button class="create float-right"><a style="color: white" href="{{ route('platform.companies.add') }}">أضافه</a></button>
               </div>
               
