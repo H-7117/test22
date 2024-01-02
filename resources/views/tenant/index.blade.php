@@ -32,7 +32,7 @@
               <div class="d-flex justify-content-between mt-2">
 
                 <h5 class="card-title fs-3">المنظمات</h5>
-                <button class="create float-right"><a style="color: white" href="{{ route('tenant.add') }}">أضافه</a></button>
+                <button class="create float-right"><a style="color: white" href="{{ route('tenant.create') }}">أضافه</a></button>
               </div>
               
               <p></p>
@@ -44,111 +44,39 @@
                     <th colspan="1">
                       الاسم
                     </th>
+                    <th colspan="1">
+                      الشعار
+                    </th>
+                    <th colspan="1">
+                      البريد الالكتروني
+                    </th>
+                
+                    <th colspan="1">
+                      المدينه
+                    </th>
+                   
                 
                     <th colspan="4">الإجراءت</th>
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($companies as $company )
+                    
                   <tr>
-                    <td>Unity Pugh</td>
+                    <td>{{ $company->name }}</td>
+                    <td><img src="{{ asset('uploads/companies/'.$company->logo) }}" height="50px" width="70px" alt=""></td>
+                    <td>{{ $company->EmailAddress }}</td>
+                    <td>{{ $company->city }}</td>
                 
                     <td>
-                      <button class="btn"><a href="{{ route('tenant.view') }}"><i class="bi bi-eye"></i></a></button>
-                      <button class="btn"><a href="{{ route('tenant.edit') }}"><i class="bi bi-pen"></i></a></button>
-                      <button class="btn"><a href="{{ route('tenant.delete') }}"><i class="bi bi-trash"></i></a></button>
+                       <button class="btn"><a href="{{ route('tenant.show',$company->id) }}"><i class="bi bi-eye"></i></a></button>
+                       <button class="btn"><a href="{{ route('tenant.edit',$company->id) }}"><i class="bi bi-pen"></i></a></button>
+                      <button class="btn"><a href="{{ route('tenant.delete',$company->id) }}"><i class="bi bi-trash"></i></a></button>
                       {{-- <button class="btn" data-bs-toggle="modal" data-bs-target="#deleteModal"><a><i class="bi bi-trash"></i></a></button> --}}
                     </td>
                   </tr>
-                  <tr>
-                    <td>Theodore Duran</td>
-              
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
+                  @endforeach
                   
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Willow Gilliam</td>
-                
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Blossom Dickerson</td>
-
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Elliott Snyder</td>
-   
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Castor Pugh</td>
-      
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Pearl Carlson</td>
- 
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Deirdre Bridges</td>
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Daniel Baldwin</td>
-
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Phelan Kane</td>
-                  
-                    <td>
-                      <button class="btn"><i class="bi bi-eye"></i></button>
-                      <button class="btn"><i class="bi bi-pen"></i></button>
-                      <button class="btn"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

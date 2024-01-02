@@ -10,15 +10,16 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo3.ico" rel="icon">
+  <link href="{{ asset('assets/img/logo3.ico') }}" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" 
+  {{-- <link rel="stylesheet" 
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+      <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome/css/all.min.css') }}">
   <!-- Vendor CSS Files -->
   {{-- <script src="https://kit.fontawesome.com/16f6ba35a2.js" crossorigin="anonymous"></script> --}}
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -48,7 +49,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo22.png" alt="">
+        <img src="{{ asset('/assets/img/logo22.png') }}" alt="">
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -276,31 +277,26 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-                <i class="bi bi-person-gear"></i>
+          <i class="bi bi-speedometer2"></i>
               <span>المنصه</span>
         </li>
-          
- 
-
+        
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="">
-            <i class="bi bi-grid"></i>
+          <i class="bi bi-key-fill"></i>
+          
             <span>الحسابات</span><i class="bi bi-chevron-down me-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
          {{-- |||||||||||||||||||||||||||||| --}}
-         <li class="nav-item" id="sidebar-navone">
-            <a class="nav-link collapsed" href="{{ route('dashboard.table') }}" >
-                <i class="bi bi-grid"></i>
+         <li  class="nav-item me-5" id="sidebar-navone">
+            <a class="nav-link collapsed " href="{{ route('dashboard.table') }}" >
+              <i class="fa-solid fa-fingerprint"></i>
                 <span>الادوار</span>
             </a>
       
           </li>
-        
-         
-         
-        
-        
+     
         {{-- |||||||||||||||||||||||||||||||||||||||| --}}
 
         {{-- <li class="nav-item" id="sidebar-navtwo">
@@ -314,13 +310,15 @@
         </ul>
       </li> --}}
       
- <li class="nav-item" id="sidebar-navtwo">
+        <li class="nav-item me-5" id="sidebar-navtwo">
             <a class="nav-link collapsed"  href="{{ route('platform.users.index') }}">
-                <i class="bi bi-grid"></i>
+              <i class="fa-solid fa-people-group"></i>
                 <span>المستخدمون</span>
             </a>
        
           </li>
+
+          
         
         </ul>
       </li>
@@ -328,12 +326,18 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed"  href="{{ route('tenant.index') }}">
-            <i class="bi bi-grid"></i>
+          <i class="fa-solid fa-building-columns"></i>
             <span>المنظمات</span>
         </a>
       </li><!-- End Components Nav -->
 
  
+      <li class="nav-item">
+        <a class="nav-link collapsed"  href="{{ route('platform.seeker.index') }}">
+            <i class="bi bi-grid"></i>
+            <span>الباحثون</span>
+        </a>
+      </li><!-- End Components Nav -->
 
       <li class="nav-item">
         <i class="bi bi-person-gear"></i>
@@ -354,11 +358,6 @@
           </a>
         
         </li>
-      
-       
-       
-      
-      
       {{-- |||||||||||||||||||||||||||||||||||||||| --}}
 
       <li class="nav-item" id="sidebar-navtwo">
@@ -395,12 +394,12 @@
       <li class="nav-item">
         <i class="bi bi-person-gear"></i>
       <span>الباحث</span>
-    </li>
+      </li>
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed"  href="#">
-          <i class="bi bi-people"></i><span>الحسابات</span>
+        <a class="nav-link collapsed"  href="{{ route('seeker.vacancies.index') }}">
+          <i class="bi bi-people"></i><span>الوظائف</span>
         </a>
       </li><!-- End Forms Nav -->
 
@@ -412,7 +411,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
           <i class="bi bi-box-arrow-in-right"></i>
-          <span>تجسيل الخروج</span>
+          <span>تسجيل الخروج</span>
         </a>
       </li><!-- End Login Page Nav -->
 

@@ -37,13 +37,12 @@
               <p></p>
 
               <!-- Table with stripped rows -->
-              <table dir="rtl" id="listTable" class="table ">
+              <table  dir="rtl" id="listTable" class="table px-5">
                 <thead>
                   <tr>
                     <th colspan="1">
                       الاسم
                     </th>
-                    <td>الشركه</td>
                     <td>عدد المتقدمين</td>
                       <td>حاله الوظيفه</td>
                     <th colspan="4">الإجراءت</th>
@@ -52,121 +51,91 @@
                 <tbody>
                   <tr>
                     <td>Unity Pugh</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td >50</td>
+                <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-eye"></i></a></button>
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                    <td>
+
+                  <td >50</td>
+                  <td><span class="btn-open">متاح</span></td>
+                  <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>40</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>40</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>30</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>30</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>20</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>20</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>10</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>10</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                   <tr>
                     <td>Kylie Bishop</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>32</td>
+                  <td><span class="btn-open">متاح</span></td>
                     <td>
                       <button class="btn"><i class="bi bi-eye"></i></button>
-
-
                     </td>
                   </tr>
                 

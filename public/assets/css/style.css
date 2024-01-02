@@ -9,12 +9,19 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/assets/fonts/tajawal/Tajawal-Light.ttf') format('truetype');
+  /* Add additional src lines for other font variations if available */
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tajawal";
   background: #f6f9ff;
   color: #444444;
 }
@@ -1322,6 +1329,27 @@ h6 {
 #listTable tbody tr td button:nth-child(3):hover a{
   color: white;
 }
+/* ======================== seeker block */
+#listTable tbody tr td .btn.bt3{
+  background: #ffece7;
+  color:rgb(255, 0, 0);
+  width:35px;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+}
+#listTable tbody tr td .btn.bt3 i {
+  color: rgb(255, 0, 0);
+}
+
+#listTable tbody tr td .btn.bt3:hover  {
+  background: #ec937b;
+  color: white;
+}
+#listTable tbody tr td .btn.bt3:hover i{
+  color: white;
+}
+/* ===================== */
 .btn-open{
   margin-right: 10px;
   display: flex;
@@ -1366,4 +1394,89 @@ h6 {
   text-align: center;
   pointer-events: none;
   color: #aaa;
+}
+
+/* ========================================== */
+div.switcher + div.switcher {
+  margin-top: 10px;
+}
+div.switcher label {
+  padding: 0;
+}
+div.switcher label * {
+  vertical-align: middle;
+}
+div.switcher label input {
+  display: none;
+}
+div.switcher label input + span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 50px;
+  height: 26px;
+  background: gray;
+  border: 2px solid gray;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+div.switcher label input + span small {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+div.switcher label input:checked + span {
+  background: green;
+  border-color: green;
+}
+div.switcher label input:checked + span small {
+  left: 50%;
+}
+/* ========================================== */
+div.switcher + div.switcher {
+  margin-top: 10px;
+}
+div.switcher label {
+  padding: 0;
+}
+div.switcher label * {
+  vertical-align: middle;
+}
+div.switcher label input {
+  display: none;
+}
+div.switcher label input + span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 50px;
+  height: 26px;
+  background: gray;
+  border: 2px solid gray;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+div.switcher label input + span small {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+div.switcher label input:checked + span {
+  background: green;
+  border-color: green;
+}
+div.switcher label input:checked + span small {
+  left: 50%;
 }

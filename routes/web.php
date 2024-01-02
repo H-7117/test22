@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Fursa\CompanyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/dashboard', function () {
 })->name('dashboard.index');
 
 
-Route::get('/dashboard/table', function () {
+Route::get('/platform/roles', function () {
     return view('dashboard.table');
 })->name('dashboard.table');
 // =================================================================================
@@ -60,61 +61,92 @@ Route::get('/platform/users/delete', function () {
     return view('platform.users.delete');
 })->name('platform.users.delete');
 // ================================================================================
-Route::get('/platform/companies/companies', function () {
+Route::get('/companies/roles/companies', function () {
     return view('platform.companies.index');
 })->name('platform.companies.index');
 
-Route::get('/platform/companies/companies/view', function () {
+Route::get('/companies/roles/companies/view', function () {
     return view('platform.companies.view');
 })->name('platform.companies.view');
 
-Route::get('/platform/companies/companies/add', function () {
+Route::get('/companies/roles/companies/add', function () {
     return view('platform.companies.add');
 })->name('platform.companies.add');
 
-Route::get('/platform/companies/companies/update', function () {
+Route::get('/companies/roles/companies/update', function () {
     return view('platform.companies.edit');
 })->name('platform.companies.update');
 
-Route::get('/platform/companies/companies/delete', function () {
+Route::get('/companies/roles/companies/delete', function () {
     return view('platform.companies.delete');
 })->name('platform.companies.delete');
+
 // ========================================================================
-Route::get('/companiesUser/index', function () {
+Route::get('/companies/companiesUser/index', function () {
     return view('platform.companiesUser.index');
 })->name('platform.companiesUser.index');
-Route::get('/companiesUser/add', function () {
+Route::get('/companies/companiesUser/add', function () {
     return view('platform.companiesUser.add');
 })->name('platform.companiesUser.add');
-Route::get('/companiesUser/view', function () {
+Route::get('/companies/companiesUser/view', function () {
     return view('platform.companiesUser.view');
 })->name('platform.companiesUser.view');
-Route::get('/companiesUser/update', function () {
+Route::get('/companies/companiesUser/update', function () {
     return view('platform.companiesUser.edit');
 })->name('platform.companiesUser.edit');
-Route::get('/companiesUser/delete', function () {
+Route::get('/companies/companiesUser/delete', function () {
     return view('platform.companiesUser.delete');
 })->name('platform.companiesUser.delete');
 // ======================================================= الشركات
-Route::get('platform/tenant', function () {
-    return view('tenant.index');
-})->name('tenant.index');
+// Route::get('platform/tenant', function () {
+//     return view('tenant.index');
+// })->name('tenant.index');
 
-Route::get('platform/tenant/add', function () {
-    return view('tenant.add');
-})->name('tenant.add');
+// Route::get('platform/tenant/add', function () {
+//     return view('tenant.add');
+// })->name('tenant.add');
 
-Route::get('platform/tenant/edit', function () {
-    return view('tenant.edit');
-})->name('tenant.edit');
+// Route::get('platform/tenant/edit', function () {
+//     return view('tenant.edit');
+// })->name('tenant.edit');
 
-Route::get('platform/tenant/view', function () {
-    return view('tenant.view');
-})->name('tenant.view');
+// Route::get('platform/tenant/view', function () {
+//     return view('tenant.view');
+// })->name('tenant.view');
 
-Route::get('platform/tenant/delete', function () {
-    return view('tenant.delete');
-})->name('tenant.delete');
+// Route::get('platform/tenant/delete', function () {
+//     return view('tenant.delete');
+// })->name('tenant.delete');
+
+
+
+
+
+Route::resource('/tenant', CompanyController::class);
+Route::get('/tenant/{id}/delete', 'App\Http\Controllers\Fursa\CompanyController@delete')->name('tenant.delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ======================================================= الوظائف
 Route::get('companies/job', function () {
@@ -169,3 +201,16 @@ Route::get('companies/vacancies/card',function(){
 Route::get('companies/vacancies/view',function(){
     return view('vacancies.view');
 })->name('vacancies.view');
+
+// ========================================== seeker/vacancies
+Route::get('seeker/vacancies/index',function(){
+    return view('seeker.vacancies.index');
+})->name('seeker.vacancies.index');
+
+Route::get('seeker/vacancies/view',function(){
+    return view('seeker.vacancies.view');
+})->name('seeker.vacancies.view');
+// ================================ platform/seeker
+Route::get('/platform/seeker',function(){
+return view('platform.seeker.index');
+})->name('platform.seeker.index');

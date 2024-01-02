@@ -16,26 +16,31 @@
               <div class="tab-content pt-2">
 
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                  <h5 class="card-title">اسم الشركه</h5>
+                  <h5 class="card-title">{{ $company->logo }}</h5>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">الاسم الكامل</div>
-                    <div class="col-lg-9 col-md-8">حمود العطاس</div>
+                    <div class="col-lg-3 col-md-4 label ">اسم الشركه</div>
+                    <div class="col-lg-9 col-md-8">{{ $company->name }}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">البريد الإلكتروني</div>
-                    <div class="col-lg-9 col-md-8">hamod2131.a@gmail.com</div>
+                    <div class="col-lg-9 col-md-8">{{ $company->EmailAddress }}</div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">العنوان</div>
-                    <div class="col-lg-9 col-md-8">المكلا</div>
+                    <div class="col-lg-3 col-md-4 label">البلد</div>
+                    <div class="col-lg-9 col-md-8">{{ $company->country }}</div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">المدينه</div>
+                    <div class="col-lg-9 col-md-8">{{ $company->city }}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">عن الشركه</div>
-                    <div class="col-lg-9 col-md-8">عن الشركه عن الشركه عن الشركه عن الشركه عن الشركه</div>
+                    <div class="col-lg-9 col-md-8">{{ $company->aboutCompany}}</div>
                   </div>
 
                 </div>

@@ -46,14 +46,56 @@
                     <input type="text" id="searchJob" class="form-control" placeholder="البحث عن وظائف بواسطة العنوان أو الرقم التعريفي">
                 </div>
                 <div class="btn-group border" >
-                    <button type="button " style=" padding: 0px 15px ; border-radius: 8px; border: 1px black; display: flex; justify-content: center; align-items: center " class="btn " data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button " style=" padding: 0px 15px ; border-radius: 8px; border: 1px black; display: flex; justify-content: center; align-items: center " class="btn  " data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                        
-                        <i class="fa-solid fa-ellipsis-vertical" style="color: #757779"><span style="margin-right: 10px">فلتر</span></i>
+                        <i class="fa-solid fa-filter" style="color: #757779"><span style="margin-right: 10px">فلتر</span></i>
                     </button>
+                   
                 </div>
 
               </div>
-              
+              <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                <div class="accordion-body" >
+                  <div class="container d-flex bg-dark" style="margin: 0" >
+                    <ul class="list-group list-group-flush " style="width: 25%">
+                      <li class="list-group-item list-group-item-action">حاله الوظيفه</li>
+                      <li class="list-group-item list-group-item-action"><div> 
+                        <div class="switcher">
+                          <label for="toggle-0">
+                            <small>مغلق</small> <input type="checkbox" id="toggle-0"/><span><small></small></span>
+                          </label>
+                        </div>
+                      
+                      </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action"><div> 
+                      <div class="switcher">
+                        <label for="toggle-1">
+                          <small>متفوح</small> <input type="checkbox" id="toggle-0"/><span><small></small></span>
+                        </label>
+                      </div>
+                    
+                    </div>
+                  </li>
+                    </ul>
+                    <ul class="list-group list-group-flush "style="width: 25%">
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                    </ul>
+                    <ul class="list-group list-group-flush " style="width: 25%">
+                      <li class="list-group-item list-group-item-action">القطاع</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                    </ul>
+                    <ul class="list-group list-group-flush " style="width: 25%">
+                      <li class="list-group-item list-group-item-action">تاريخ الانشاء</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                      <li class="list-group-item list-group-item-action">الموقع</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <p></p>
 
               
@@ -62,7 +104,7 @@
                   <div class="container p-3 d-flex  justify-content-between">
                     <div class="d-flex">
                       <h5 class="mt-1 fw-bold text-primary">مطور واجهات</h5>
-                      <span class="btn-open">مفتوح</span>
+                      <span class="btn-open">متاح</span>
                     </div>
                     <div class="d-flex " style="gap: 5px;">
                       {{-- ============================== --}}
@@ -73,7 +115,7 @@
                           مفتوح
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">مفتوح</a></li>
+                          <li><a class="dropdown-item" href="#">متاح</a></li>
                           <li><a class="dropdown-item" href="#">مغلق</a></li>
                       </div>
                        
@@ -82,7 +124,7 @@
                           <i class="fa-solid fa-ellipsis-vertical" style="color: #757779"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">مفتوح</a></li>
+                          <li><a class="dropdown-item" href="#">متاح</a></li>
                           <li><a class="dropdown-item" href="#">مغلق</a></li>
                       </div>
 
@@ -125,7 +167,7 @@
     <div class="container p-3 d-flex  justify-content-between">
       <div class="d-flex">
         <h5 class="mt-1 fw-bold text-primary">مطور واجهات</h5>
-        <span class="btn-open">مفتوح</span>
+        <span class="btn-open">متاح</span>
       </div>
       <div class="d-flex " style="gap: 5px;">
         {{-- ============================== --}}
@@ -133,7 +175,7 @@
       
         <div class="btn-group border">
           <button type="button " style="padding: 0px 20px; border-radius: 8px; height: 30px; border: 1px black; display: flex; justify-content: center; align-items: center " class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            مفتوح
+            متاح
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">مفتوح</a></li>
