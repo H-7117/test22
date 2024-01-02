@@ -131,15 +131,9 @@ Route::get('/tenant/{id}/delete', 'App\Http\Controllers\Fursa\CompanyController@
 
 
 
-
-
-
-
-
-
-
-
-
+Route::get('text', function () {
+    return 'asfsdfsd';
+});
 
 
 
