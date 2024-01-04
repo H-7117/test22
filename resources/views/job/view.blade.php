@@ -16,37 +16,33 @@
               <div class="tab-content pt-2">
 
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                  <h5 class="card-title">اسم الوظيفه</h5>
+                  <h5 class="card-title">الاسم ({{ $job->Title }})</h5>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">اسم الوظيفه</div>
-                    <div class="col-lg-9 col-md-8">حمود العطاس</div>
+                    <div class="col-lg-9 col-md-8">{{ $job->Title }}</div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">اسم الشركه</div>
-                    <div class="col-lg-9 col-md-8">hamod2131.a@gmail.com</div>
+                    <div class="col-lg-3 col-md-4 label">اسم القطاع</div>
+                    <div class="col-lg-9 col-md-8">{{ $job->departments->Name }}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">موقع الوظيفه</div>
-                    <div class="col-lg-9 col-md-8">المكلا</div>
+                    <div class="col-lg-9 col-md-8">{{ $job->Location }}</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">نوع الوظيفه</div>
-                    <div class="col-lg-9 col-md-8">عن الشركه عن الشركه عن الشركه عن الشركه عن الشركه</div>
+                    <div class="col-lg-9 col-md-8">{{ $job->jobType }}</div>
                   </div>
                  
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">وحدة العمل</div>
-                    <div class="col-lg-9 col-md-8">عن الشركه عن الشركه عن الشركه عن الشركه عن الشركه</div>
-                  </div>
-
-                  <div class="row">
                     <div class="col-lg-3 col-md-4 label">وصف الوظيفه</div>
-                    <div class="col-lg-9 col-md-8">عن الشركه عن الشركه عن الشركه عن الشركه عن الشركه</div>
+                    <div class="col-lg-9 col-md-8">{{ $job->jobDescription }}</div>
                   </div>
+                 
 
                 </div>
 

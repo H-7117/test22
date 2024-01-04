@@ -20,6 +20,16 @@ class CompanyController extends Controller
         return view('tenant.index',compact('companies'));
     }
 
+    public function accepted(){
+        $companies = Company::all();
+        return view('tenant.acepted',compact('companies'));
+    }
+    
+    public function reject(){
+        $companies = Company::all();
+        return view('tenant.reject',compact('companies'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

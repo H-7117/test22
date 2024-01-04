@@ -1370,6 +1370,25 @@ h6 {
 }
 
 
+.btn-close{
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff2d2d;
+  box-shadow: #ff0000 0 10px 15px -11px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #8c2100;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  width: fit-content;
+}
+
 
 #searchJob{
   width: 400px;

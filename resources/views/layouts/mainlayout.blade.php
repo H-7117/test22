@@ -233,6 +233,29 @@
                 <span>حسابي</span>
               </a>
             </li>
+            
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('tenant.create') }}">
+                <i class="bi bi-person"></i>
+                <span>سجل كمنظمه</span>
+              </a>
+            </li>
+            
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('platform.seeker.create') }}">
+                <i class="bi bi-person"></i>
+                <span>سجل كباحث</span>
+              </a>
+            </li>
+            
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -324,14 +347,41 @@
       </li>
 
 
-      <li class="nav-item">
-        <a class="nav-link collapsed"  href="{{ route('tenant.index') }}">
-          <i class="fa-solid fa-building-columns"></i>
-            <span>المنظمات</span>
-        </a>
-      </li><!-- End Components Nav -->
+      
 
  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav12" data-bs-toggle="collapse" href="">
+          <i class="fa-solid fa-building-columns"></i>
+          <span>المنظمات</span><i class="bi bi-chevron-down me-auto"></i>
+        </a>
+        <ul id="components-nav12" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         {{-- |||||||||||||||||||||||||||||| --}}
+         <li class="nav-item me-5" id="sidebar-navone">
+            <a class="nav-link collapsed" href="{{ route('tenant.index') }}">
+                <span>قيد الانتظار</span>
+            </a>
+          
+          </li>
+        {{-- |||||||||||||||||||||||||||||||||||||||| --}}
+  
+        <li class="nav-item me-5" id="sidebar-navtwo">
+            <a class="nav-link collapsed" href="{{ route('tenant.acceptted') }}">
+                <span>مقبولين</span>
+            </a>
+        
+          </li><!-- End Components Nav -->
+        
+          <li class="nav-item me-5" id="sidebar-navtwo">
+            <a class="nav-link collapsed" href="{{ route('tenant.reject') }}">
+                <span>مرفوضين</span>
+            </a>
+        
+          </li><!-- End Components Nav -->
+        
+        </ul>
+      </li><!-- End Components Nav -->
+
       <li class="nav-item">
         <a class="nav-link collapsed"  href="{{ route('platform.seeker.index') }}">
             <i class="bi bi-grid"></i>
@@ -371,7 +421,15 @@
     </li><!-- End Components Nav -->
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="{{ route('job.index') }}">
+      <a class="nav-link collapsed" href="{{ route('depertment.index') }}">
+          <i class="bi bi-grid"></i>
+          <span>الاقسام</span>
+      </a>
+    </li><!-- End Components Nav -->
+
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{ route('companiesJob.index') }}">
           <i class="bi bi-grid"></i>
           <span>الوظائف</span>
       </a>
@@ -385,7 +443,7 @@
     </li><!-- End Components Nav -->
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="{{ route('vacancies.index') }}">
+      <a class="nav-link collapsed" href="{{ route('companyVacancies.index') }}">
           <i class="bi bi-grid"></i>
           <span>الشواغر</span>
       </a>

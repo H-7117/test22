@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card">
-          <form class="card-body" action="{{ route('companiesJob.destroy', $job->id) }}" method="POST" id="delete-form">
+          <form class="card-body" action="{{ route('depertment.destroy', $depertment->id) }}" method="POST" id="delete-form">
             @csrf
             @method('DELETE')
             <h2 class="card-title">تأكيد الحذف</h2>

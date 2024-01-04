@@ -32,7 +32,7 @@
               <div class="d-flex justify-content-between mt-2">
 
                 <h5 class="card-title fs-3 ">الوظائف</h5>
-                <button class="create float-right"><a style="color: white" href="{{ route('tenant.add') }}">أضافه</a></button>
+                <button class="create float-right"><a style="color: white" href="{{ route('') }}">أضافه</a></button>
               </div>
               
               <p></p>

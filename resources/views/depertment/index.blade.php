@@ -3,7 +3,7 @@
 
 
     <div class="pagetitle">
-      <h1>سجل الوظائف</h1>
+      <h1>القطاعات</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -14,8 +14,8 @@
             <div class="card-body">
               <div class="d-flex justify-content-between mt-2">
 
-                <h5 class="card-title fs-3">الوظائف</h5>
-                <button class="create float-right"><a style="color: white" href="{{ route('companiesJob.create') }}" >أضافه</a></button>
+                <h5 class="card-title fs-3">المنظمات</h5>
+                <button class="create float-right"><a style="color: white" href="{{ route('depertment.create') }}">أضافه</a></button>
               </div>
               
               <p></p>
@@ -27,40 +27,34 @@
                     <th colspan="1">
                       الاسم
                     </th>
-                  
+                    
                     <th colspan="1">
-                      نوع الوظيفه
+                      الوصف
                     </th>
                     <th colspan="1">
-                   الموقع </th>
+                      الشركات
+                    </th>
+                   
                 
-                   <th colspan="1">
-                    القطاع</th>
-                 
                     <th colspan="4">الإجراءت</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($jobs as $job)
+                  @foreach ($depertments as $depertment )
                     
                   <tr>
-                    <td>{{ $job->Title }}</td>
-                    <td>{{ $job->jobType }}</td>
-                    <td>{{ $job->Location }}</td>
-                    <td>{{ $job->departments->Name }}</td>
-                    
+                    <td>{{ $depertment->Name }}</td>
+                    <td>{{ $depertment->Description }}</td>
+                    <td>{{ $depertment->company->name }}</td>
                     <td>
-                       <button class="btn"><a href="{{ route('companiesJob.show',$job->id) }}"><i class="bi bi-eye"></i></a></button>
-                       <button class="btn"><a href="{{ route('companiesJob.edit',$job->id) }}"><i class="bi bi-pen"></i></a></button>
-                     <button class="btn"><a href="{{ route('companiesJob.delete',$job->id) }}"><i class="bi bi-trash"></i></a></button>
+                        <button class="btn"><a href="{{ route('depertment.show',$depertment->id) }}"><i class="bi bi-eye"></i></a></button>
+                       <button class="btn"><a href="{{ route('depertment.edit',$depertment->id) }}"><i class="bi bi-pen"></i></a></button>
+                      <button class="btn"><a href="{{ route('depertment.delete',$depertment->id) }}"><i class="bi bi-trash"></i></a></button> 
                       {{-- <button class="btn" data-bs-toggle="modal" data-bs-target="#deleteModal"><a><i class="bi bi-trash"></i></a></button> --}}
                     </td>
                   </tr>
                   @endforeach
-                 
-          
-   
-                
+                  
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

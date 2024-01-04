@@ -1,23 +1,6 @@
 @extends('layouts.mainlayout')
 @section('usertable')
 
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header  ">
-        <button type="button " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h5 class="modal-title d-flex justify-content-end" id="deleteModalLabel">تأكيد الحذف</h5>
-      </div>
-      <div class="modal-body">
-        <p>هل أنت متأكد أنك تريد حذف هذه السجل</p>
-      </div>
-      <div class="modal-footer d-flex justify-content-start">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
-        <button type="button" class="btn btn-danger">حذف</button>
-      </div>
-    </div>
-  </div>
-</div>
 
     <div class="pagetitle">
       <h1>سجل بيانات الباحثون</h1>
@@ -39,104 +22,42 @@
               <!-- Table with stripped rows -->
               <table dir="rtl" id="listTable" class="table ">
                 <thead>
+                  
                   <tr>
                     <th colspan="1">
-                      الاسم
+                      رقم المستخدم
                     </th>
+                    <th colspan="1">
+                      اسم المستخدم
+                    </th>
+                    <th colspan="1">
+                      التخصص 
+                    </th>
+                    <th colspan="1">
+                      المسمى الوظيفي 
+                     </th>
                  
                     <th colspan="4">الإجراءت</th>
                   </tr>
                 </thead>
                 <tbody>
+                  
+                  @foreach ($seeker as $seekers)
                   <tr>
-                    <td>Unity Pugh</td>
+                    <td>{{ $seekers->user_id }}</td>
+                    <td>{{ $seekers->userName }}</td>
+                    <td>{{ $seekers->PositionTitle }}</td>
+                    <td>{{ $seekers->Specialization	 }}</td>
               
                     <td>
-                      <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                      <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
+                      <button class="btn"><a href="{{ route('platform.seeker.edit',$seekers->id) }}"><i class="bi bi-eye"></i></a></button>
+                      {{-- <button class="btn"><a href="{{ route('platform.seeker.show',$seekers->id) }}"><i class="bi bi-person-fill-check"></i></a></button> --}}
+                      {{-- <button class="btn bt3"><a ><i class="bi bi-person-fill-slash"></i></a></button> --}}
                     </td>
                   </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-                 
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-             
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-               
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-                 
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-               
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-              
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-              
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-              
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kylie Bishop</td>
-               
-                    <td>
-                        <button class="btn"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-check"></i></a></button>
-                        <button class="btn bt3"><a href="{{ route('vacancies.view') }}"><i class="bi bi-person-fill-slash"></i></a></button>
-                    </td>
-                  </tr>
+                  @endforeach
                 
+
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

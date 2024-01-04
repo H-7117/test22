@@ -1,24 +1,6 @@
 @extends('layouts.mainlayout')
 @section('usertable')
 
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header  ">
-        <button type="button " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h5 class="modal-title d-flex justify-content-end" id="deleteModalLabel">تأكيد الحذف</h5>
-      </div>
-      <div class="modal-body">
-        <p>هل أنت متأكد أنك تريد حذف هذه السجل</p>
-      </div>
-      <div class="modal-footer d-flex justify-content-start">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
-        <button type="button" class="btn btn-danger">حذف</button>
-      </div>
-    </div>
-  </div>
-</div>
-
     <div class="pagetitle">
       <h1>ادوار المستخدمين في الشركات</h1>
     </div><!-- End Page Title -->
