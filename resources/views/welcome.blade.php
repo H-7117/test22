@@ -209,8 +209,8 @@
         كل الحقوق محفوظة
       </p>
     </div>
-    <script src="./image/aos-master/dist/aos.js"></script>
-    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="{{ asset('assets/aos-master/dist/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
 
     <script>

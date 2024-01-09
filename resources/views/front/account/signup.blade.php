@@ -1,16 +1,18 @@
-<body>
-    <div class="form-wrapper row" style="display: flex; align-items: center;justify-content: center;">
+@extends('layouts.loginlayout')
+@section('content')
+
+    <div class="form-wrapper row">
         
         <div class="info-side col-6 col-md-6 col-sm-12 ">
             
-            <img src="assets/Sign up-amico.svg" alt="Mock" class="mockup" />
+            <img src="{{ asset('assets/img/Sign up-amico.svg') }}" alt="Mock" class="mockup" />
          
         </div>
 
 
         <div class="form-side col-6 col-md-6 col-sm-12">
             <a href="./index.html" title="Logo">
-                <img class="logo" src="assets/logo22.png" alt="Logo">
+                <img class="logo" src="{{ asset('assets/img/logo22.png') }}" alt="Logo">
             </a>
             <form class="my-form">
                
@@ -45,6 +47,4 @@
             </form>
         </div>
     </div>
-    <script src="./assets/js/script.js"></script>
-    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
-</body>
+@endsection

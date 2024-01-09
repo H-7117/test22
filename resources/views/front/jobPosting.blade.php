@@ -148,7 +148,7 @@
                     margin-right: 10px;
                     object-fit: fill;
                   "
-                                src="./image/logo22.png" alt="" />
+                                src="{{ asset('assets/img/logo22.png') }}" alt="" />
                         </div>
                         <div class="" style="direction: rtl">
                             <div
@@ -197,7 +197,7 @@
                     margin-right: 10px;
                     object-fit: fill;
                   "
-                                src="./image/774shots_so.png" alt="" />
+                                src="{{ asset('assets/img/logo22.png') }}" alt="" />
                         </div>
                         <div class="" style="direction: rtl">
                             <div
@@ -246,7 +246,7 @@
                     margin-right: 10px;
                     object-fit: fill;
                   "
-                                src="./image/IMG_9024.jpg" alt="" />
+                                src="{{ asset('assets/img/logo22.png') }}" alt="" />
                         </div>
                         <div class="" style="direction: rtl">
                             <div

@@ -30,6 +30,15 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard.index');
 
+// ===============================
+Route::get('/signup',function(){
+    return view('front.account.signup');
+})->name('signup');
+
+Route::get('/signin',function(){
+    return view('front.account.signin');
+})->name('signin');
+// ===============================
 
 Route::get('/platform/roles', function () {
     return view('dashboard.table');

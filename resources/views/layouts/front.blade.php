@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/landingPage.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome/css/all.css') }}" />
-    <link rel="stylesheet" href="./image/aos-master/dist/aos.css" />
+    <link rel="stylesheet" href="{{ asset('assets/aos-master/dist/aos.css') }}" />
     <link rel="stylesheet" href=".{{ asset('assets/fonts/tajawal/Tajawal-Light.ttf') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link
@@ -30,8 +30,8 @@
         </ol>
       </div>
       <div class="Login_register">
-        <button><a href="./rigester-form.html">حساب جديد</a></button>
-        <a href="./loginPage.html">دخـــول</a>
+        <button><a href="{{ route('signup') }}">حساب جديد</a></button>
+        <a href="{{ route('signin') }}">دخـــول</a>
       </div>
     </header>
 <!-- ============================================================================================== -->
