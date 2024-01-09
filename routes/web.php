@@ -21,7 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('Home');
+
+Route::get('/jobPost',function(){
+    return view('front.jobPosting');
+})->name('JonPosting');
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard.index');
