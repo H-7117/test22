@@ -5,6 +5,7 @@ use App\Http\Controllers\Fursa\DepertmentController;
 use App\Http\Controllers\Fursa\JobController;
 use App\Http\Controllers\Fursa\SeekerController;
 use App\Http\Controllers\Fursa\VacancyController;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -139,9 +140,9 @@ Route::get('companies/seeker/delete', function () {
 //     return view('vacancies.index');
 // })->name('vacancies.index');
 
-// Route::get('companies/vacancies/card',function(){
-//     return view('vacancies.card');
-// })->name('vacancies.card');
+Route::get('companies/vacancies/card',function(){
+    return view('vacancies.aa');
+})->name('vacancies.card');
 
 // Route::get('companies/vacancies/view',function(){
 //     return view('vacancies.view');
@@ -160,6 +161,10 @@ Route::get('seeker/vacancies/view',function(){
 // Route::get('/platform/seeker',function(){
 // return view('platform.seeker.index');
 // })->name('platform.seeker.index');
+
+// Route::prefix('platform')->group(function(){
+
+// });
 
 Route::get('/platform/seeker',[SeekerController::class,'index'])->name('platform.seeker.index');
 Route::get('/platform/seeker/create','App\Http\Controllers\Fursa\SeekerController@create')->name('platform.seeker.create');
