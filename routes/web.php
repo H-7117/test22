@@ -3,6 +3,7 @@
 use App\Http\Controllers\Fursa\CompanyController;
 use App\Http\Controllers\Fursa\DepertmentController;
 use App\Http\Controllers\Fursa\JobController;
+use App\Http\Controllers\Fursa\JobStageController;
 use App\Http\Controllers\Fursa\SeekerController;
 use App\Http\Controllers\Fursa\VacancyController;
 use Illuminate\Support\Facades\Redis;
@@ -115,6 +116,7 @@ Route::get('/companies/companiesUser/update', function () {
 Route::get('/companies/companiesUser/delete', function () {
     return view('platform.companiesUser.delete');
 })->name('platform.companiesUser.delete');
+
 // ======================================================= الشركات
 
 Route::resource('/tenant', CompanyController::class);
@@ -187,3 +189,6 @@ Route::put('/platform/seeker/update/{id}', [SeekerController::class ,'update'])-
 // ============================================================================
 Route::get('/depertment/{id}/delete', 'App\Http\Controllers\Fursa\DepertmentController@delete')->name('depertment.delete');
 Route::resource('/depertment', DepertmentController::class);
+
+
+Route::post('compaines/stage',[JobStageController::class,'store'])->name('stage.store');

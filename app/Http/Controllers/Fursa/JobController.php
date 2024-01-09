@@ -6,12 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Models\Fursa\Depertment;
 use Illuminate\Http\Request;
 use App\Models\Fursa\job;
+use App\Services\Fursa\JobService;
 
 class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    public function __construct(private JobService $jobService)
+    {
+        
+    }
     public function index()
     {
         //
@@ -36,16 +41,12 @@ class JobController extends Controller
     public function store(Request $request)
     {
         //
-        job::create(
-            [
-                'Title' => $request->Title,
-                'jobDescription' => $request->jobDescription,
-                'jobType'=> $request->jobType,
-                'Location'=> $request->Location,
-                'depertments_id'=> $request->depertments_id
-            ]
-        );
- 
+        if ($job_id=  $this->jobService->store($request)) {
+            return view('job.stage',compact('job_id'));
+        }else{
+            return redirect()->back()->withErrors('لم تتم عميله حفظ الوظيفه بنجاح');
+        }
+     
     return redirect()->route('companiesJob.index');
 
     }
