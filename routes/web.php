@@ -203,6 +203,13 @@ route::get('compaines/stage/{id}/delete',[JobStageController::class,'delete'])->
 route::delete('compaines/stage/{id}/destroy',[JobStageController::class,'destroy'])->name('stage.destroy');
 // 
 
-Route::get('compaines/jobApplication',[JobApplcationController::class])->name('jobApplication.index');
+Route::get('compaines/jobApplication',[JobApplcationController::class,'index'])->name('jobApplication.index');
+route::get('compaines/jobApplication/{id}',[JobApplcationController::class,'show'])->name('jobApplication.show');
+route::get('compaines/jobApplication/{id}/edit',[JobApplcationController::class,'edit'])->name('jobApplication.edit');
+route::put('compaines/jobApplication/{id}/update',[JobApplcationController::class,'update'])->name('jobApplication.update');
+route::get('compaines/jobApplication/{id}/delete',[JobApplcationController::class,'delete'])->name('jobApplication.delete');
+route::delete('compaines/jobApplication/{id}/destroy',[JobApplcationController::class,'destroy'])->name('jobApplication.destroy');
+
+// 
 Route::post('compaines/Application',[JobApplcationController::class,'store'])->name('Appliction.store');
 

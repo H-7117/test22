@@ -452,7 +452,7 @@
       
 
         <li class="nav-item" id="sidebar-navtwo">
-          <a class="nav-link collapsed">
+          <a class="nav-link collapsed" href="{{ route('jobApplication.index') }}">
               <span>التقديم</span>
           </a>
       

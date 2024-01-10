@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Fursa;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fursa\job;
 use App\Services\Fursa\JobStageService;
 use Illuminate\Http\Request;
 use App\Models\Fursa\JobStage;
@@ -21,6 +22,8 @@ class JobStageController extends Controller
     {
         //
         $JobStage = JobStage::all();
+        
+        
         return view('job.jobStage.index',compact('JobStage'));
     }
 

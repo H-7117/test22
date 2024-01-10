@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Fursa;
 use App\Http\Controllers\Controller;
 use App\Services\Fursa\JobApplcationService;
 use Illuminate\Http\Request;
+use App\Models\Fursa\JobApplcation;
 
 class JobApplcationController extends Controller
 {
@@ -18,6 +19,8 @@ class JobApplcationController extends Controller
     public function index()
     {
         //
+        $jobApplcation =JobApplcation::all();
+        return view('job.jobApplication.index',compact('jobApplcation'));
         
     }
 
@@ -48,6 +51,9 @@ class JobApplcationController extends Controller
     public function show(string $id)
     {
         //
+        $jobApplcation =JobApplcation::findOrFail($id);
+        return view('job.jobApplication.view',compact('jobApplcation'));
+        
     }
 
     /**
@@ -56,6 +62,8 @@ class JobApplcationController extends Controller
     public function edit(string $id)
     {
         //
+        $jobApplcation = $this->jobApplcationService->getById($id);
+        return view('job.jobApplication.update',compact('jobApplcation'));
     }
 
     /**
@@ -64,13 +72,25 @@ class JobApplcationController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        if (!$this->jobApplcationService->update($request,$id)) {
+            return redirect()->route('jobApplication.index');
+        }
+        return redirect()->back()->withErrors('لم تتم عمليه التعديل');
     }
 
+        public function delete($id){
+            $jobApplcation = $this->jobApplcationService->getById($id);
+            return view('job.jobApplication.delete',compact('jobApplcation'));
+        }
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
         //
+        if (!$this->jobApplcationService->destory($id)) {
+            return redirect()->route('jobApplication.index');
+            }
+            return redirect()->back()->withErrors('لم تتم عمليه الحذف');
     }
 }

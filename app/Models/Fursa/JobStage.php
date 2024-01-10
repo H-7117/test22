@@ -12,7 +12,7 @@ class JobStage extends Model
     use HasFactory;
     protected $fillable = ['jobs_id','name','round'];
 
-    public function job(): BelongsTo
+    public function job()
     {
         return $this->belongsTo(job::class,'jobs_id');
     }

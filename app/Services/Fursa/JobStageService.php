@@ -16,7 +16,7 @@ class JobStageService{
     public function update(Request $request ,$id){
         $jopStage = JobStage::findOrFail($id);
         $jopStage->name= $request->name;
-        $jopStage->name= $request->name;
+        $jopStage->round= $request->round;
         $jopStage->save();
     }
     public function getById($id)

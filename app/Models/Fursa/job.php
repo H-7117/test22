@@ -29,4 +29,10 @@ class job extends Model
         
         return $this->hasMany(JobStage::class);
     }
+
+    public function jobApplcation()
+    {
+        
+        return $this->hasMany(jobApplcation::class);
+    }
 }
