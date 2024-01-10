@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Fursa;
 use App\Http\Controllers\Controller;
 use App\Services\Fursa\JobStageService;
 use Illuminate\Http\Request;
+use App\Models\Fursa\JobStage;
 
 class JobStageController extends Controller
 {
@@ -19,6 +20,8 @@ class JobStageController extends Controller
     public function index()
     {
         //
+        $JobStage = JobStage::all();
+        return view('job.jobStage.index',compact('JobStage'));
     }
 
     /**
@@ -35,24 +38,34 @@ class JobStageController extends Controller
     public function store(Request $request)
     {
         //
-        $jobId = $this->jobStageService->store($request);
+        if ($jobId = $this->jobStageService->store($request)) {
+            return view('job.jobApplication',compact('jobId'));
+        }else{
+            return redirect()->back()->withErrors('لم تتم عميله تخزين البيانات');
+        }
         return $jobId;
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
         //
+     
+        $jobStage = JobStage::findOrFail($id);
+        return view('job.jobStage.view',compact('jobStage'));
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit( $id)
     {
         //
+        $jobstage= $this->jobStageService->getById($id);
+        return view('job.jobStage.update',compact('jobstage'));
     }
 
     /**
@@ -61,6 +74,16 @@ class JobStageController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        if (!$this->jobStageService->update($request,$id)) {
+            return redirect()->route('stage.index');
+        }
+        return redirect()->back()->withErrors('لم تتم عمليه التعديل');
+
+    }
+
+    public function delete($id){
+        $jobstage= $this->jobStageService->getById($id);
+        return view('job.jobStage.delete',compact('jobstage'));
     }
 
     /**
@@ -69,5 +92,10 @@ class JobStageController extends Controller
     public function destroy(string $id)
     {
         //
+        if (!$this->jobStageService->destory($id)) {
+            return redirect()->route('stage.index');
+            }
+            return redirect()->back()->withErrors('لم تتم عمليه الحذف');
+
     }
 }

@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Fursa\CompanyController;
 use App\Http\Controllers\Fursa\DepertmentController;
+use App\Http\Controllers\Fursa\JobApplcationController;
 use App\Http\Controllers\Fursa\JobController;
 use App\Http\Controllers\Fursa\JobStageController;
 use App\Http\Controllers\Fursa\SeekerController;
 use App\Http\Controllers\Fursa\VacancyController;
+use App\Models\Fursa\JobApplcation;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 
@@ -190,5 +192,17 @@ Route::put('/platform/seeker/update/{id}', [SeekerController::class ,'update'])-
 Route::get('/depertment/{id}/delete', 'App\Http\Controllers\Fursa\DepertmentController@delete')->name('depertment.delete');
 Route::resource('/depertment', DepertmentController::class);
 
+// ==========================================
 
-Route::post('compaines/stage',[JobStageController::class,'store'])->name('stage.store');
+Route::get('compaines/stage',[JobStageController::class,'index'])->name('stage.index');
+Route::post('compaines/stage/store',[JobStageController::class,'store'])->name('stage.store');
+route::get('compaines/stage/{id}',[JobStageController::class,'show'])->name('stage.show');
+route::get('compaines/stage/{id}/edit',[JobStageController::class,'edit'])->name('stage.edit');
+route::put('compaines/stage/{id}/update',[JobStageController::class,'update'])->name('stage.update');
+route::get('compaines/stage/{id}/delete',[JobStageController::class,'delete'])->name('stage.delete');
+route::delete('compaines/stage/{id}/destroy',[JobStageController::class,'destroy'])->name('stage.destroy');
+// 
+
+Route::get('compaines/jobApplication',[JobApplcationController::class])->name('jobApplication.index');
+Route::post('compaines/Application',[JobApplcationController::class,'store'])->name('Appliction.store');
+

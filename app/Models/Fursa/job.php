@@ -23,4 +23,10 @@ class job extends Model
     {
         return $this->hasOne(vacancy::class);
     }
+
+    public function jobSatge()
+    {
+        
+        return $this->hasMany(JobStage::class);
+    }
 }

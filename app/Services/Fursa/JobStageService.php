@@ -12,4 +12,20 @@ class JobStageService{
         ]);
         return $request->jobId;
     }
+
+    public function update(Request $request ,$id){
+        $jopStage = JobStage::findOrFail($id);
+        $jopStage->name= $request->name;
+        $jopStage->name= $request->name;
+        $jopStage->save();
+    }
+    public function getById($id)
+    {
+        return JobStage::find($id);
+    }
+
+    public function destory($id){
+        $jobStage = JobStage::findOrFail($id);
+        $jobStage->delete();
+    }
 }

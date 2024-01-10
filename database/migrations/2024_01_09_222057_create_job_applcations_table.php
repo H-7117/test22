@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('job_applcations', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('name');
+            $table->unsignedBigInteger('jobs_id');
+            $table->boolean('name');
+            $table->boolean('phone');
+            $table->boolean('personalEmail');
+            $table->boolean('links');
+            $table->boolean('cv');
             $table->timestamps();
         });
     }

@@ -427,13 +427,39 @@
       </a>
     </li><!-- End Components Nav -->
 
-
+{{--  --}}
     <li class="nav-item">
-      <a class="nav-link collapsed" href="{{ route('companiesJob.index') }}">
+      <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="">
           <i class="bi bi-grid"></i>
-          <span>الوظائف</span>
+          <span>الوظائف</span><i class="bi bi-chevron-down me-auto"></i>
       </a>
+      <ul id="components-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+       {{-- |||||||||||||||||||||||||||||| --}}
+       <li class="nav-item" id="sidebar-navone">
+          <a class="nav-link collapsed"  href="{{ route('companiesJob.index') }}">
+              <span>انشاء الوظائف</span>
+          </a>
+        
+        </li>
+      {{-- |||||||||||||||||||||||||||||||||||||||| --}}
+
+      <li class="nav-item" id="sidebar-navtwo">
+          <a class="nav-link collapsed" href="{{ route('stage.index') }}">
+              <span>المراحل التوظيفيه</span>
+          </a>
+      
+        </li><!-- End Components Nav -->
+      
+
+        <li class="nav-item" id="sidebar-navtwo">
+          <a class="nav-link collapsed">
+              <span>التقديم</span>
+          </a>
+      
+        </li><!-- End Components Nav -->
+      </ul>
     </li><!-- End Components Nav -->
+{{--  --}}
 
     <li class="nav-item">
       <a class="nav-link collapsed" href="{{ route('seeker.index') }}">
